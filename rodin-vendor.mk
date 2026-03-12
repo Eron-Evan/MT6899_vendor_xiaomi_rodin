@@ -51,6 +51,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/mt6899/ISP_mapping.db:$(TARGET_COPY_OUT_ODM)/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/mt6899/ISP_mapping.db \
     vendor/xiaomi/rodin/proprietary/odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/mt6899/ISP_param.db:$(TARGET_COPY_OUT_ODM)/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/mt6899/ISP_param.db \
     vendor/xiaomi/rodin/proprietary/odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/mt6899/ISP_info.db:$(TARGET_COPY_OUT_ODM)/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/mt6899/ISP_info.db \
+    vendor/xiaomi/rodin/proprietary/odm/etc/1khz.wav:$(TARGET_COPY_OUT_ODM)/etc/1khz.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/RES1K.wav:$(TARGET_COPY_OUT_ODM)/etc/RES1K.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/bottom_spk.wav:$(TARGET_COPY_OUT_ODM)/etc/bottom_spk.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/bottom_spk_hp.wav:$(TARGET_COPY_OUT_ODM)/etc/bottom_spk_hp.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/CFR_para_UW.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/CFR_para_UW.bin \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/CameraImageSize.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/CameraImageSize.bin \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/CameraPlatformInfo.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/CameraPlatformInfo.bin \
@@ -200,6 +204,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/xiaomi/tpwechatsimplevideo.json:$(TARGET_COPY_OUT_ODM)/etc/camera/xiaomi/tpwechatsimplevideo.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/xiaomi/uwsuperlowlightshot.json:$(TARGET_COPY_OUT_ODM)/etc/camera/xiaomi/uwsuperlowlightshot.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/xiaomiSceneDetection.xml:$(TARGET_COPY_OUT_ODM)/etc/camera/xiaomiSceneDetection.xml \
+    vendor/xiaomi/rodin/proprietary/odm/etc/cit_param_config.json:$(TARGET_COPY_OUT_ODM)/etc/cit_param_config.json \
+    vendor/xiaomi/rodin/proprietary/odm/etc/coverVibrationTest.wav:$(TARGET_COPY_OUT_ODM)/etc/coverVibrationTest.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/cust_color.xml:$(TARGET_COPY_OUT_ODM)/etc/cust_color.xml \
     vendor/xiaomi/rodin/proprietary/odm/etc/df_default.xml:$(TARGET_COPY_OUT_ODM)/etc/df_default.xml \
     vendor/xiaomi/rodin/proprietary/odm/etc/disp0/dsi_o10_36_02_0b_dsc_vdo/OD_Lut.bin:$(TARGET_COPY_OUT_ODM)/etc/disp0/dsi_o10_36_02_0b_dsc_vdo/OD_Lut.bin \
@@ -278,10 +284,20 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/etc/o10_36_02_0b_dsc_vdo_pq.xml:$(TARGET_COPY_OUT_ODM)/etc/o10_36_02_0b_dsc_vdo_pq.xml \
     vendor/xiaomi/rodin/proprietary/odm/etc/o10_42_02_0a_dsc_vdo_cust_silky_brightness.xml:$(TARGET_COPY_OUT_ODM)/etc/o10_42_02_0a_dsc_vdo_cust_silky_brightness.xml \
     vendor/xiaomi/rodin/proprietary/odm/etc/o10_42_02_0a_dsc_vdo_pq.xml:$(TARGET_COPY_OUT_ODM)/etc/o10_42_02_0a_dsc_vdo_pq.xml \
+    vendor/xiaomi/rodin/proprietary/odm/etc/rcv.wav:$(TARGET_COPY_OUT_ODM)/etc/rcv.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/rcv_pink.wav:$(TARGET_COPY_OUT_ODM)/etc/rcv_pink.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/sensors/lightSensorCali.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/lightSensorCali.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/sensors/lightSensorConfig.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/lightSensorConfig.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/sensors/lightSensorConfigSec.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/lightSensorConfigSec.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/sensors/ois_params_data.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/ois_params_data.json \
+    vendor/xiaomi/rodin/proprietary/odm/etc/spk.wav:$(TARGET_COPY_OUT_ODM)/etc/spk.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/spk_cal_silence.wav:$(TARGET_COPY_OUT_ODM)/etc/spk_cal_silence.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/spk_cal_sweep.wav:$(TARGET_COPY_OUT_ODM)/etc/spk_cal_sweep.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/spk_cal_whitenoise.wav:$(TARGET_COPY_OUT_ODM)/etc/spk_cal_whitenoise.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/spk_hp.wav:$(TARGET_COPY_OUT_ODM)/etc/spk_hp.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/stereo.wav:$(TARGET_COPY_OUT_ODM)/etc/stereo.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/top_spk.wav:$(TARGET_COPY_OUT_ODM)/etc/top_spk.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/ultrasound.wav:$(TARGET_COPY_OUT_ODM)/etc/ultrasound.wav \
     vendor/xiaomi/rodin/proprietary/odm/firmware/Conf_MultipleTest.ini:$(TARGET_COPY_OUT_ODM)/firmware/Conf_MultipleTest.ini \
     vendor/xiaomi/rodin/proprietary/odm/firmware/focaltech_ts_fw_rodin.bin:$(TARGET_COPY_OUT_ODM)/firmware/focaltech_ts_fw_rodin.bin \
     vendor/xiaomi/rodin/proprietary/odm/firmware/goodix_cfg_group_rodin.bin:$(TARGET_COPY_OUT_ODM)/firmware/goodix_cfg_group_rodin.bin \
@@ -553,6 +569,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/smartpa_param_fs/preset_voice.bin:$(TARGET_COPY_OUT_VENDOR)/etc/smartpa_param_fs/preset_voice.bin \
     vendor/xiaomi/rodin/proprietary/vendor/etc/smartpa_param_fs/preset_voip.bin:$(TARGET_COPY_OUT_VENDOR)/etc/smartpa_param_fs/preset_voip.bin \
     vendor/xiaomi/rodin/proprietary/vendor/etc/special_pws_channel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/special_pws_channel.xml \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/spk_cal_silence.wav:$(TARGET_COPY_OUT_VENDOR)/etc/spk_cal_silence.wav \
     vendor/xiaomi/rodin/proprietary/vendor/etc/thermal-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-map.conf \
     vendor/xiaomi/rodin/proprietary/vendor/etc/thermald-devices.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald-devices.conf \
     vendor/xiaomi/rodin/proprietary/vendor/etc/vendor-apns-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vendor-apns-conf.xml \
@@ -1555,6 +1572,7 @@ PRODUCT_PACKAGES += \
     libneuron_graph_delegate.mtk \
     libneuronusdk_adapter.mtk \
     libnir_neon_driver_ndk.mtk \
+    libtfa98xx_cal \
     libtflite_mtk.mtk \
     vendor.mediatek.hardware.apuware.apusys-V5-ndk \
     vendor.mediatek.hardware.apuware.apusys@1.0 \
@@ -1704,6 +1722,7 @@ PRODUCT_PACKAGES += \
     libwa_widelens_undistort \
     vendor.xiaomi.hardware.framecapturemanager-V1-ndk \
     com.google.android.widevine.nonupdatable \
+    MiuiCit \
     HotwordEnrollmentXGoogleRISCV_WIDEBAND \
     HotwordEnrollmentYGoogleRISCV_WIDEBAND \
     JVFactoryTest \
@@ -1788,6 +1807,14 @@ PRODUCT_PACKAGES += \
     wlan_assistant \
     wmt_launcher \
     wmt_loader \
+    spkcal \
+    spkcal_88263s \
+    spkcal_88263s_m16 \
+    spkcal_88263s_m9 \
+    spkcal_88263s_n12 \
+    spkcal_88263s_n12a \
+    spkcal_88263s_o10 \
+    spkcal_tfa \
     fidoca_mitee \
     vendor.xiaomi.hw.touchfeature-service \
     vendor.xiaomi.sensor.citsensorservice.aidl \
