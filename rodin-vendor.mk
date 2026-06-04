@@ -324,6 +324,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/AudioDump_dynamic.ds:$(TARGET_COPY_OUT_VENDOR)/etc/AudioDump_dynamic.ds \
     vendor/xiaomi/rodin/proprietary/vendor/etc/AudioLog_dynamic.ds:$(TARGET_COPY_OUT_VENDOR)/etc/AudioLog_dynamic.ds \
     vendor/xiaomi/rodin/proprietary/vendor/etc/MNL_Config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/MNL_Config.xml \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/TL_settings.json:$(TARGET_COPY_OUT_VENDOR)/etc/TL_settings.json \
     vendor/xiaomi/rodin/proprietary/vendor/etc/VideoLog_dynamic.ds:$(TARGET_COPY_OUT_VENDOR)/etc/VideoLog_dynamic.ds \
     vendor/xiaomi/rodin/proprietary/vendor/etc/apdb/APDB_MT6899___W2439:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6899___W2439 \
     vendor/xiaomi/rodin/proprietary/vendor/etc/apdb/APDB_MT6899___W2439_ENUM:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6899___W2439_ENUM \
@@ -484,6 +485,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/camera/mimotion_f5b.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mimotion_f5b.bin \
     vendor/xiaomi/rodin/proprietary/vendor/etc/camera/mimotion_f5w.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mimotion_f5w.bin \
     vendor/xiaomi/rodin/proprietary/vendor/etc/camera/mt6899/gma_custom.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mt6899/gma_custom.txt \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/chre/nearby.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/nearby.napp_header \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/chre/nearby.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/nearby.so \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/chre/preloaded_nanoapps.json:$(TARGET_COPY_OUT_VENDOR)/etc/chre/preloaded_nanoapps.json \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/default_pd_calibration.bin:$(TARGET_COPY_OUT_VENDOR)/etc/default_pd_calibration.bin \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/dolby/dax-default-spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default-spatializer.xml \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/dolby/dax-fs19xx-spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-fs19xx-spatializer.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/dolby/dax-fs19xx.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-fs19xx.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
@@ -541,6 +548,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/libxiaomi_mtkril.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libxiaomi_mtkril.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/miteelog.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/miteelog.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/mtk_agpsd_p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_agpsd_p.rc \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/init/mtk_gnss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_gnss.rc \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/init/mtk_lbs_service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_lbs_service.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/mtkrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtkrild.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/muxreport.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/muxreport.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/nvram_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nvram_daemon.rc \
@@ -559,9 +568,97 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/mali_platform.config:$(TARGET_COPY_OUT_VENDOR)/etc/mali_platform.config \
     vendor/xiaomi/rodin/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/mpe.conf:$(TARGET_COPY_OUT_VENDOR)/etc/mpe.conf \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nhw:$(TARGET_COPY_OUT_VENDOR)/etc/nhw \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/cam_aimemc/camera_memc_30to60.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/cam_aimemc/camera_memc_30to60.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/cam_aimemc/camera_memc_resizer_1080p_afbc_nv12.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/cam_aimemc/camera_memc_resizer_1080p_afbc_nv12.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/cam_aimemc/camera_memc_resizer_1080p_yuv420_nv21.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/cam_aimemc/camera_memc_resizer_1080p_yuv420_nv21.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/cam_aimemc/camera_memc_resizer_2160p_afbc_nv12.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/cam_aimemc/camera_memc_resizer_2160p_afbc_nv12.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/cam_aimemc/camera_memc_resizer_2160p_yuv420_nv21.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/cam_aimemc/camera_memc_resizer_2160p_yuv420_nv21.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/cam_aimemc/confidence_fallback_levels.json:$(TARGET_COPY_OUT_VENDOR)/etc/nn/cam_aimemc/confidence_fallback_levels.json \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/cam_aimemc/settings_4K.json:$(TARGET_COPY_OUT_VENDOR)/etc/nn/cam_aimemc/settings_4K.json \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/cam_aimemc/settings_FHD.json:$(TARGET_COPY_OUT_VENDOR)/etc/nn/cam_aimemc/settings_FHD.json \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/ot/neuron_detection.mdla5_3:$(TARGET_COPY_OUT_VENDOR)/etc/nn/ot/neuron_detection.mdla5_3 \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/ot/neuron_detection.mdla5_5.cache:$(TARGET_COPY_OUT_VENDOR)/etc/nn/ot/neuron_detection.mdla5_5.cache \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/ot/neuron_tracking.mdla5_3:$(TARGET_COPY_OUT_VENDOR)/etc/nn/ot/neuron_tracking.mdla5_3 \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/ot/neuron_tracking.mdla5_5.cache:$(TARGET_COPY_OUT_VENDOR)/etc/nn/ot/neuron_tracking.mdla5_5.cache \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aimemc/confidence_fallback_levels.json:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aimemc/confidence_fallback_levels.json \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aimemc/resolution_settings.json:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aimemc/resolution_settings.json \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aimemc/settings.json:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aimemc/settings.json \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aimemc/video_memc_24to60.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aimemc/video_memc_24to60.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aimemc/video_memc_30to60.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aimemc/video_memc_30to60.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aimemc/video_memc_resizer_dynamic_out720Y_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aimemc/video_memc_resizer_dynamic_out720Y_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aimemc/video_memc_resizer_dynamic_out720Y_10b_CBFC.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aimemc/video_memc_resizer_dynamic_out720Y_10b_CBFC.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aimemc/video_memc_resizer_dynamic_out720Y_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aimemc/video_memc_resizer_dynamic_out720Y_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aimemc/video_memc_resizer_dynamic_out720Y_8b_CBFC.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aimemc/video_memc_resizer_dynamic_out720Y_8b_CBFC.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q1_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q1_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q1_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q1_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q1_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q1_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q1_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q1_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q2_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q2_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q2_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q2_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q2_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q2_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q2_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q2_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q3_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q3_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q3_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q3_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q3_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q3_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q3_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q3_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q4_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q4_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q4_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q4_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q4_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q4_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q4_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q4_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q5_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q5_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q5_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q5_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q5_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q5_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q5_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q5_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q6_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q6_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q6_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q6_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q6_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q6_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q6_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q6_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q7_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q7_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q7_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q7_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q7_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q7_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q7_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q7_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q8_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q8_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q8_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q8_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q8_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q8_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q8_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/1.5x/mtk_AISR_D1_Q8_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q1_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q1_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q1_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q1_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q1_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q1_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q1_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q1_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q2_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q2_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q2_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q2_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q2_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q2_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q2_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q2_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q3_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q3_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q3_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q3_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q3_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q3_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q3_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q3_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q4_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q4_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q4_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q4_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q4_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q4_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q4_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q4_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q5_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q5_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q5_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q5_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q5_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q5_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q5_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q5_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q6_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q6_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q6_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q6_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q6_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q6_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q6_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q6_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q7_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q7_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q7_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q7_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q7_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q7_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q7_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q7_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q8_dynamic_1k_10b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q8_dynamic_1k_10b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q8_dynamic_1k_8b.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q8_dynamic_1k_8b.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q8_dynamic_1k_8b_l.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q8_dynamic_1k_8b_l.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q8_dynamic_1k_8b_p.dla:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/2.0x/mtk_AISR_D1_Q8_dynamic_1k_8b_p.dla \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/nn/video_aisr/resolution_settings.json:$(TARGET_COPY_OUT_VENDOR)/etc/nn/video_aisr/resolution_settings.json \
     vendor/xiaomi/rodin/proprietary/vendor/etc/nnapi_powerhal.json:$(TARGET_COPY_OUT_VENDOR)/etc/nnapi_powerhal.json \
     vendor/xiaomi/rodin/proprietary/vendor/etc/permissions/android.hardware.hardware_keystore.mitee.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.mitee.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/permissions/android.hardware.identity_credential.mitee.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.identity_credential.mitee.xml \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/permissions/camera_extensions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/camera_extensions.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/pq_flag.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pq_flag.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/sensor_diag.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/sensor_diag.cfg \
     vendor/xiaomi/rodin/proprietary/vendor/etc/slp_conf:$(TARGET_COPY_OUT_VENDOR)/etc/slp_conf \
@@ -714,6 +811,13 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl-mediatek \
     android.hardware.security.keymint-V3-ndk-v34 \
     com.xiaomi.camdfx \
+    com.xiaomi.immunesystem.bigdata \
+    com.xiaomi.immunesystem.bigdata2 \
+    com.xiaomi.immunesystem.client \
+    com.xiaomi.immunesystem.core \
+    com.xiaomi.immunesystem.hook.mivi \
+    com.xiaomi.immunesystem.hook.mtkhal \
+    com.xiaomi.messagecenter \
     libGLES_meow \
     libMEOW_data \
     libMEOW_gift \
@@ -735,6 +839,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.camera.isphal@1.1-impl \
     vendor.mediatek.hardware.pq_aidl-impl \
     vulkan.mali \
+    mtkflp.default \
     mtkgeofence.default \
     sensors.dynamic_sensor_hal \
     sensors.elliptic@2.0 \
@@ -746,8 +851,10 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.camera.isphal_aidl@1.0-impl \
     vendor.mediatek.hardware.camera.uieventservice_aidl@1.0-impl \
     vendor.mediatek.hardware.gnss-impl \
+    vendor.mediatek.hardware.gnss.batching-impl \
     vendor.mediatek.hardware.nvram-impl \
     vendor.mediatek.hardware.videotelephony-impl \
+    immunesystem.db.sqlite3 \
     lib3a.ae.pipe \
     lib3a.custom.shading.flow \
     libAF \
@@ -772,6 +879,7 @@ PRODUCT_PACKAGES += \
     libaal_sec \
     libaimemc \
     libaispq \
+    libapmonitor_vendor \
     libappgamepq \
     libapu_mdw \
     libapu_mdw_batch \
@@ -873,6 +981,7 @@ PRODUCT_PACKAGES += \
     libfeaturepolicy \
     libfgauge_gm30 \
     libfile_op \
+    libforkexecwrap \
     libformatter \
     libfsmsmartpaparse \
     libfvaudio \
@@ -891,6 +1000,7 @@ PRODUCT_PACKAGES += \
     libhfmanagerwrapper \
     libhidparser \
     libhwm \
+    libifcutils_mtk \
     libimagebuffer_wrapper \
     libimgstream_sync \
     libimgsys_osal \
@@ -903,6 +1013,7 @@ PRODUCT_PACKAGES += \
     libjpegencoder_rodin \
     libladder \
     libmbrainSDKv \
+    libmcve \
     libmiSATTranslate \
     libmialgo \
     libmialgo_ai_vision \
@@ -1024,6 +1135,7 @@ PRODUCT_PACKAGES += \
     librilfusion \
     librt_extamp_intf \
     libsdrparser \
+    libshadowhook \
     libsilkybrightnesscore \
     libsimlock \
     libsimmelock \
@@ -1032,6 +1144,7 @@ PRODUCT_PACKAGES += \
     libspeech_enh_lib \
     libspeechparser_vendor \
     libstorage_otp \
+    libswtcc \
     libsysenv \
     libteecli \
     libtflite_mtk-vendor \
@@ -1125,6 +1238,9 @@ PRODUCT_PACKAGES += \
     libalgo.aosp.log \
     libapiwrapper \
     libapudcutils \
+    libarm_egl_properties_sysprop \
+    libarm_gralloc_properties_sysprop \
+    libarm_mali_config_sysprops \
     libcam.3a_isp.utils \
     libcam.afmgr \
     libcam.chdr \
@@ -1293,6 +1409,7 @@ PRODUCT_PACKAGES += \
     libmml \
     libmmlpqImpl \
     libmnl \
+    libmtk_mali_utils \
     libmtkcam.atmseventmgr \
     libmtkcam.debugwrapper \
     libmtkcam.eventcallback \
@@ -1463,12 +1580,15 @@ PRODUCT_PACKAGES += \
     rodinsc820csultra_mipi_raw_4_tuning \
     rodinsc820csultra_mipi_raw_IdxMgr \
     rodinsc820csultra_mipi_raw_tuning \
+    mtk_lbs_service-impl \
     libdlbvolaidl \
     libswdapaidl \
     libswgamedapaidl \
     libswspatializeraidl \
     vendor.dolby.dms-V1-ndk \
     vendor.dolby.hardware.dms@2.0 \
+    vendor.mediatek.hardware.apmonitor-V1-ndk \
+    vendor.mediatek.hardware.apmonitor@2.0 \
     vendor.mediatek.hardware.apuware.apusys-V5-ndk-vendor \
     vendor.mediatek.hardware.apuware.utils-V1-ndk-vendor \
     vendor.mediatek.hardware.apuware.utils@2.0-vendor \
@@ -1492,7 +1612,9 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.composer_ext-V1-ndk \
     vendor.mediatek.hardware.composer_ext@1.0 \
     vendor.mediatek.hardware.gnss-V2-ndk \
+    vendor.mediatek.hardware.gnss.batching-V1-ndk \
     vendor.mediatek.hardware.lbs-V1-ndk \
+    vendor.mediatek.hardware.lbs@1.0 \
     vendor.mediatek.hardware.mbrain-V6-ndk \
     vendor.mediatek.hardware.mdmonitor-V1-ndk \
     vendor.mediatek.hardware.mdmonitor@1.0 \
@@ -1565,6 +1687,7 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.mlipay-V1-ndk \
     vendor.xiaomi.hw.touchfeature-V1-ndk-prebuilt \
     vendor.xiaomi.sensor.citsensorservice-V1-ndk \
+    xiaomi.system.hypsys.common-V1-ndk \
     libapuwareapusys.mtk \
     libapuwareapusys_v2.mtk \
     libapuwarehmp.mtk \
@@ -1755,6 +1878,8 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentYGoogleRISCV_WIDEBAND \
     JVFactoryTest \
     goodix_sz_rodin \
+    camerax-vendor-extensions \
+    androidx.camera.extensions.impl \
     com.android.hotwordenrollment.common.util \
     CommandService.xml \
     android.hardware.audio.effect.service-aidl.xml \
@@ -1782,10 +1907,11 @@ PRODUCT_PACKAGES += \
     manifest_mtkgpuserv.xml \
     manifest_uievent.xml \
     mapper.mediatek.xml \
+    mtk_lbs_service.xml \
+    mtkgnss-batching.xml \
     vendor.dolby.media.c2-default-service-dax.xml \
     vendor.xiaomi.hardware.aidlbgservice-service.xml \
     vendor.xiaomi.hardware.displayfeature_aidl-service.xml \
-    vendor.xiaomi.hardware.dynamiccameraserver.xml \
     manifest_vendor.xiaomi.hardware.aidl.mtdservice.xml \
     manifest_vendor.xiaomi.hardware.mfidoca.xml \
     manifest_vendor.xiaomi.hardware.mlipay.xml \
@@ -1817,6 +1943,7 @@ PRODUCT_PACKAGES += \
     tetheroffloadservice \
     vendor.dolby.dms.service \
     vendor.dolby.media.c2-default-service-dax \
+    vendor.mediatek.hardware.gnss-service \
     vendor.mediatek.hardware.gpuserv-service \
     vendor.mediatek.hardware.mmagent-service \
     vendor.mediatek.hardware.mmlpq@V1-service \
@@ -1824,7 +1951,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.nvram-service \
     vendor.mediatek.hardware.pq_aidl-service \
     vendor.xiaomi.hardware.displayfeature_aidl-service \
-    vendor.xiaomi.hardware.dynamiccameraserver \
     vendor.xiaomi.hardware.secure_element-service \
     vtservice_aidl \
     init.insmod \
@@ -1832,6 +1958,7 @@ PRODUCT_PACKAGES += \
     miteelog \
     mnld \
     mtk_agpsd \
+    mtk_lbs_service \
     muxreport \
     nvram_daemon \
     rcs_volte_stack \
@@ -1976,6 +2103,9 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libalgo_aosp_log_so \
     vendor_lib64_libapiwrapper_so \
     vendor_lib64_libapudcutils_so \
+    vendor_lib64_libarm_egl_properties_sysprop_so \
+    vendor_lib64_libarm_gralloc_properties_sysprop_so \
+    vendor_lib64_libarm_mali_config_sysprops_so \
     vendor_lib64_libcam_3a_isp_utils_so \
     vendor_lib64_libcam_afmgr_so \
     vendor_lib64_libcam_chdr_so \
@@ -2144,6 +2274,7 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libmml_so \
     vendor_lib64_libmmlpqImpl_so \
     vendor_lib64_libmnl_so \
+    vendor_lib64_libmtk_mali_utils_so \
     vendor_lib64_libmtkcam_atmseventmgr_so \
     vendor_lib64_libmtkcam_debugwrapper_so \
     vendor_lib64_libmtkcam_eventcallback_so \
@@ -2314,3 +2445,6 @@ PRODUCT_PACKAGES += \
     vendor_lib64_rodinsc820csultra_mipi_raw_4_tuning_so \
     vendor_lib64_rodinsc820csultra_mipi_raw_IdxMgr_so \
     vendor_lib64_rodinsc820csultra_mipi_raw_tuning_so
+
+PRODUCT_BOOT_JARS += \
+    camerax-vendor-extensions
