@@ -2069,6 +2069,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libMiPhotoFilter.so",
             ],
             shared_libs: [
+                "libbinder_shim",
                 "liblog",
                 "libGLESv3",
                 "libEGL",
@@ -6708,6 +6709,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libprocessgroup_shim",
+                "libbinder_shim",
                 "libc++",
                 "libcutils",
                 "liblog",
@@ -30423,6 +30425,7 @@ cc_prebuilt_library_shared {
                 "proprietary/odm/lib64/camera/plugins/capture/com.xiaomi.plugin.depurple.so",
             ],
             shared_libs: [
+                "libbinder_shim",
                 "libcutils",
                 "liblog",
                 "libutils",
@@ -30457,6 +30460,7 @@ cc_prebuilt_library_shared {
                 "proprietary/odm/lib64/camera/plugins/capture/com.xiaomi.plugin.filter.so",
             ],
             shared_libs: [
+                "libbinder_shim",
                 "libcutils",
                 "liblog",
                 "libutils",
@@ -34035,6 +34039,7 @@ cc_prebuilt_library_shared {
                 "proprietary/odm/lib64/libmorpho_Depurple.so",
             ],
             shared_libs: [
+                "libbinder_shim",
                 "liblog",
                 "libdl",
                 "libc",
@@ -35740,6 +35745,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/mt6899/camerahalserver",
             ],
             shared_libs: [
+                "libbinder_shim",
                 "liblog",
                 "libutils",
                 "libcutils",
