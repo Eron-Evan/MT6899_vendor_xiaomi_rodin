@@ -2058,35 +2058,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libMiPhotoFilter",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libMiPhotoFilter.so",
-            ],
-            shared_libs: [
-                "libbinder_shim",
-                "liblog",
-                "libGLESv3",
-                "libEGL",
-                "libnativewindow",
-                "libz",
-                "libm",
-                "libdl",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libMtkSpeechEnh",
     owner: "xiaomi",
     strip: {
@@ -28847,6 +28818,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libMiVideoFilter",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libMiVideoFilter.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libGLESv3",
+                "libEGL",
+                "libnativewindow",
+                "libz",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libapuwareapusys.mtk",
     owner: "xiaomi",
     strip: {
@@ -31133,6 +31132,7 @@ cc_prebuilt_library_shared {
                 "libGLESv2",
                 "libnativewindow",
                 "libminikin.xiaomi",
+                "libMiPhotoFilter",
                 "libc++",
                 "libc",
                 "libm",
@@ -31142,6 +31142,42 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     relative_install_path: "camera/plugins/capture",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.xiaomi.plugin.heifedit",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/camera/plugins/com.xiaomi.plugin.heifedit.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libcamera_metadata",
+                "libcom.xiaomi.pluginutils",
+                "libcom.xiaomi.metadatautils",
+                "libcom.xiaomi.debug",
+                "com.xiaomi.camdfx",
+                "libcameraheif",
+                "libexif",
+                "libimage_io",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "camera/plugins",
     prefer: true,
     device_specific: true,
 }
@@ -31454,6 +31490,7 @@ cc_prebuilt_library_shared {
                 "libcom.xiaomi.debug",
                 "com.xiaomi.camdfx",
                 "libmtkcam_metadata",
+                "libmtkcam.atmseventmgr",
                 "libc++_shared",
                 "libcamera_scene",
                 "libarcsoft_turbo_hdr_detection",
@@ -31499,6 +31536,7 @@ cc_prebuilt_library_shared {
                 "libcamera_scene",
                 "libarcsoft_super_night_detection",
                 "libmialgo_sd",
+                "libmtkcam.atmseventmgr",
                 "libmialgo_cls",
                 "libc++",
                 "libc",
@@ -31967,9 +32005,9 @@ cc_prebuilt_library_shared {
                 "libcom.xiaomi.debug",
                 "com.xiaomi.camdfx",
                 "libmtkcam_metadata",
-                "libMiVideoFilter",
                 "libGLESv3",
                 "libui",
+                "libMiPhotoFilter",
                 "libc++",
                 "libc",
                 "libm",
@@ -32302,7 +32340,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libMiVideoFilter",
+    name: "libMiPhotoFilter",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -32310,7 +32348,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/odm/lib64/libMiVideoFilter.so",
+                "proprietary/odm/lib64/libMiPhotoFilter.so",
             ],
             shared_libs: [
                 "liblog",
@@ -32877,6 +32915,30 @@ cc_prebuilt_library_shared {
                 "libm",
                 "libc",
                 "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcameraheif",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libcameraheif.so",
+            ],
+            shared_libs: [
+                "libm",
+                "libc++_shared",
+                "libdl",
+                "libc",
             ],
         },
     },

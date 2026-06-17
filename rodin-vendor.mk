@@ -53,6 +53,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/mt6899/ISP_info.db:$(TARGET_COPY_OUT_ODM)/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/mt6899/ISP_info.db \
     vendor/xiaomi/rodin/proprietary/odm/etc/1khz.wav:$(TARGET_COPY_OUT_ODM)/etc/1khz.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/RES1K.wav:$(TARGET_COPY_OUT_ODM)/etc/RES1K.wav \
+    vendor/xiaomi/rodin/proprietary/odm/etc/TcnRecordmodel_6899_w8a16pcq_np8_0_4_nhwc.minn:$(TARGET_COPY_OUT_ODM)/etc/TcnRecordmodel_6899_w8a16pcq_np8_0_4_nhwc.minn \
     vendor/xiaomi/rodin/proprietary/odm/etc/bottom_spk.wav:$(TARGET_COPY_OUT_ODM)/etc/bottom_spk.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/bottom_spk_hp.wav:$(TARGET_COPY_OUT_ODM)/etc/bottom_spk_hp.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/CFR_para_UW.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/CFR_para_UW.bin \
@@ -83,6 +84,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/beauty/beauty_config_ru.json:$(TARGET_COPY_OUT_ODM)/etc/camera/beauty/beauty_config_ru.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/beauty/resources/style_xiaomi_o10.hdcg:$(TARGET_COPY_OUT_ODM)/etc/camera/beauty/resources/style_xiaomi_o10.hdcg \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/camerabooster.json:$(TARGET_COPY_OUT_ODM)/etc/camera/camerabooster.json \
+    vendor/xiaomi/rodin/proprietary/odm/etc/camera/cameraopt_reclaim.json:$(TARGET_COPY_OUT_ODM)/etc/camera/cameraopt_reclaim.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/com.xiaomi.dcal.w1u1.golden:$(TARGET_COPY_OUT_ODM)/etc/camera/com.xiaomi.dcal.w1u1.golden \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/com.xiaomi.dcal.w2u2.golden:$(TARGET_COPY_OUT_ODM)/etc/camera/com.xiaomi.dcal.w2u2.golden \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/com.xiaomi.dcal.wu.golden:$(TARGET_COPY_OUT_ODM)/etc/camera/com.xiaomi.dcal.wu.golden \
@@ -863,7 +865,6 @@ PRODUCT_PACKAGES += \
     libFrameRecord \
     libJpgEncPipe \
     libMiMotion \
-    libMiPhotoFilter \
     libMtkSpeechEnh \
     libNoFpsActor \
     libOpenCL \
@@ -1688,6 +1689,7 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hw.touchfeature-V1-ndk-prebuilt \
     vendor.xiaomi.sensor.citsensorservice-V1-ndk \
     xiaomi.system.hypsys.common-V1-ndk \
+    libMiVideoFilter \
     libapuwareapusys.mtk \
     libapuwareapusys_v2.mtk \
     libapuwarehmp.mtk \
@@ -1761,6 +1763,7 @@ PRODUCT_PACKAGES += \
     com.xiaomi.plugin.swflip \
     com.xiaomi.plugin.swjpegencode \
     com.xiaomi.plugin.watermark \
+    com.xiaomi.plugin.heifedit \
     com.xiaomi.plugin.hwjpeg \
     com.xiaomi.plugin.hwproc \
     com.xiaomi.plugin.memcpy \
@@ -1793,7 +1796,7 @@ PRODUCT_PACKAGES += \
     libHISCppAlgos \
     libMiDispDevManager \
     libMiEmojiEffect \
-    libMiVideoFilter \
+    libMiPhotoFilter \
     libadaptivehdr \
     libalCFR \
     libanc_dc_base \
@@ -1815,6 +1818,7 @@ PRODUCT_PACKAGES += \
     libbarrage \
     libc++_shared \
     libcamera_scene \
+    libcameraheif \
     libclient2slpi.notifier \
     libcolortempmode \
     libdeflicker \
