@@ -53,7 +53,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/mt6899/ISP_info.db:$(TARGET_COPY_OUT_ODM)/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/mt6899/ISP_info.db \
     vendor/xiaomi/rodin/proprietary/odm/etc/1khz.wav:$(TARGET_COPY_OUT_ODM)/etc/1khz.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/RES1K.wav:$(TARGET_COPY_OUT_ODM)/etc/RES1K.wav \
-    vendor/xiaomi/rodin/proprietary/odm/etc/TcnRecordmodel_6899_w8a16pcq_np8_0_4_nhwc.minn:$(TARGET_COPY_OUT_ODM)/etc/TcnRecordmodel_6899_w8a16pcq_np8_0_4_nhwc.minn \
     vendor/xiaomi/rodin/proprietary/odm/etc/bottom_spk.wav:$(TARGET_COPY_OUT_ODM)/etc/bottom_spk.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/bottom_spk_hp.wav:$(TARGET_COPY_OUT_ODM)/etc/bottom_spk_hp.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/CFR_para_UW.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/CFR_para_UW.bin \
@@ -84,7 +83,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/beauty/beauty_config_ru.json:$(TARGET_COPY_OUT_ODM)/etc/camera/beauty/beauty_config_ru.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/beauty/resources/style_xiaomi_o10.hdcg:$(TARGET_COPY_OUT_ODM)/etc/camera/beauty/resources/style_xiaomi_o10.hdcg \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/camerabooster.json:$(TARGET_COPY_OUT_ODM)/etc/camera/camerabooster.json \
-    vendor/xiaomi/rodin/proprietary/odm/etc/camera/cameraopt_reclaim.json:$(TARGET_COPY_OUT_ODM)/etc/camera/cameraopt_reclaim.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/com.xiaomi.dcal.w1u1.golden:$(TARGET_COPY_OUT_ODM)/etc/camera/com.xiaomi.dcal.w1u1.golden \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/com.xiaomi.dcal.w2u2.golden:$(TARGET_COPY_OUT_ODM)/etc/camera/com.xiaomi.dcal.w2u2.golden \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/com.xiaomi.dcal.wu.golden:$(TARGET_COPY_OUT_ODM)/etc/camera/com.xiaomi.dcal.wu.golden \
@@ -311,7 +309,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/mitee/ta/a3ba6512-6e0e-4065-93165e4a7d04ca08.ta:$(TARGET_COPY_OUT_ODM)/mitee/ta/a3ba6512-6e0e-4065-93165e4a7d04ca08.ta \
     vendor/xiaomi/rodin/proprietary/system/etc/public.libraries-mtk.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-mtk.txt \
     vendor/xiaomi/rodin/proprietary/system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/android.hardware.audio.parameter_parser.service.rc \
+    vendor/xiaomi/rodin/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
     vendor/xiaomi/rodin/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
+    vendor/xiaomi/rodin/proprietary/system_ext/etc/sysconfig/com.mediatek.ims.config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.mediatek.ims.config.xml \
     vendor/xiaomi/rodin/proprietary/vendor/bin/crossbuild/DataSet/SQLiteModule/db/port_select.db:$(TARGET_COPY_OUT_VENDOR)/bin/crossbuild/DataSet/SQLiteModule/db/port_select.db \
     vendor/xiaomi/rodin/proprietary/vendor/data/model/VEdynamic.dla:$(TARGET_COPY_OUT_VENDOR)/data/model/VEdynamic.dla \
     vendor/xiaomi/rodin/proprietary/vendor/data/model/mt6899_mc_1088x1920.dla:$(TARGET_COPY_OUT_VENDOR)/data/model/mt6899_mc_1088x1920.dla \
@@ -806,7 +806,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/mitee/ta/e97c270e-a5c4-4c58-bcd3384a2fa2539e.ta:$(TARGET_COPY_OUT_VENDOR)/mitee/ta/e97c270e-a5c4-4c58-bcd3384a2fa2539e.ta
 
 PRODUCT_PACKAGES += \
-    av-audio-types-aidl-V1-ndk \
+    av-audio-types-aidl-V3-ndk \
     APUWareApusysAidlServer \
     APUWareUtilsAidlServer \
     android.hardware.audio.core-impl-mediatek \
@@ -960,6 +960,7 @@ PRODUCT_PACKAGES += \
     libcom.xiaomi.grallocutils \
     libcom.xiaomi.hwadapter.decoupleutil \
     libcom.xiaomi.hwadapter.postprocinterface \
+    libcom.xiaomi.ionutils \
     libcom.xiaomi.metadatautils \
     libcom.xiaomi.mivihal.cpupolicy \
     libcom.xiaomi.pluginutils \
@@ -1668,7 +1669,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.pq_aidl-V7-ndk \
     vendor.mediatek.hardware.rcs-V1-ndk \
     vendor.mediatek.hardware.rcs@2.0 \
-    vendor.mediatek.hardware.videotelephony-V1-ndk \
+    vendor.mediatek.hardware.videotelephony-V1-ndk-vendor \
     vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk \
     vendor.xiaomi.hardware.aidl.tidaservice-V1-ndk \
     vendor.xiaomi.hardware.aidlbgservice-V1-impl \
@@ -1699,6 +1700,13 @@ PRODUCT_PACKAGES += \
     libapuwarexrp_v2.mtk \
     libarmnn_ndk.mtk \
     libcmdl_ndk.mtk \
+    libcomutils \
+    libimsma \
+    libimsma_adapt \
+    libimsma_rtp \
+    libimsma_socketwrapper \
+    libmtk_vt_service \
+    libmtk_vt_wrapper \
     libmvpu_cic_ci_compiler.mtk \
     libmvpu_cic_ci_compiler_25.mtk \
     libmvpu_clc_14_mvpu_elf_25.mtk \
@@ -1724,8 +1732,14 @@ PRODUCT_PACKAGES += \
     libneuron_graph_delegate.mtk \
     libneuronusdk_adapter.mtk \
     libnir_neon_driver_ndk.mtk \
+    libsignal \
+    libsink-mtk \
+    libsource \
     libtfa98xx_cal \
     libtflite_mtk.mtk \
+    libvcodec_cap \
+    libvcodec_capenc \
+    libvt_avsync \
     vendor.mediatek.hardware.apuware.apusys-V5-ndk \
     vendor.mediatek.hardware.apuware.apusys@1.0 \
     vendor.mediatek.hardware.apuware.apusys@2.0 \
@@ -1737,6 +1751,8 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.apuware.xrp-V1-ndk \
     vendor.mediatek.hardware.apuware.xrp@1.0 \
     vendor.mediatek.hardware.apuware.xrp@2.0 \
+    vendor.mediatek.hardware.videotelephony-V1-ndk \
+    vendor.mediatek.hardware.videotelephony@1.0 \
     anc.hal \
     com.xiaomi.plugin.arcrawhdr \
     com.xiaomi.plugin.arcsoftsr \
@@ -1763,7 +1779,6 @@ PRODUCT_PACKAGES += \
     com.xiaomi.plugin.swflip \
     com.xiaomi.plugin.swjpegencode \
     com.xiaomi.plugin.watermark \
-    com.xiaomi.plugin.heifedit \
     com.xiaomi.plugin.hwjpeg \
     com.xiaomi.plugin.hwproc \
     com.xiaomi.plugin.memcpy \
@@ -1818,7 +1833,6 @@ PRODUCT_PACKAGES += \
     libbarrage \
     libc++_shared \
     libcamera_scene \
-    libcameraheif \
     libclient2slpi.notifier \
     libcolortempmode \
     libdeflicker \
@@ -1880,11 +1894,20 @@ PRODUCT_PACKAGES += \
     MiuiCit \
     HotwordEnrollmentXGoogleRISCV_WIDEBAND \
     HotwordEnrollmentYGoogleRISCV_WIDEBAND \
+    ImsService \
+    MtkGbaService \
+    MtkTelephonyAssist \
     JVFactoryTest \
     goodix_sz_rodin \
     camerax-vendor-extensions \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common \
     androidx.camera.extensions.impl \
     com.android.hotwordenrollment.common.util \
+    mediatek-ims-extension-plugin \
     CommandService.xml \
     android.hardware.audio.effect.service-aidl.xml \
     android.hardware.audio.service-aidl.mediatek.xml \
@@ -1982,6 +2005,7 @@ PRODUCT_PACKAGES += \
     spkcal_88263s_n12a \
     spkcal_88263s_o10 \
     spkcal_tfa \
+    vtservice \
     fidoca_mitee \
     vendor.xiaomi.hw.touchfeature-service \
     vendor.xiaomi.sensor.citsensorservice.aidl \
@@ -2451,4 +2475,9 @@ PRODUCT_PACKAGES += \
     vendor_lib64_rodinsc820csultra_mipi_raw_tuning_so
 
 PRODUCT_BOOT_JARS += \
-    camerax-vendor-extensions
+    camerax-vendor-extensions \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
